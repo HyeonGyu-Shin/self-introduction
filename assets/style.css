@@ -7,7 +7,8 @@ body {
 }
 
 .container {
-    padding: 0 32px;
+    padding-right: 32px;
+    padding-left: 32px;
     max-width: calc(1200px + 32px + 32px);
     width: 100%;
     margin: 0 auto;
@@ -15,8 +16,15 @@ body {
 
 @media (max-width: 767px) {
     .container {
-        padding: 0 16px;
+        padding-right: 16px;
+        padding-left: 16px;
     }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Header */
@@ -82,14 +90,16 @@ body {
 
 /* Main */
 
+/* Main - 1. Intro */
+
 #intro {
     background-color: #fafafa;
+    min-height: 453px;
 }
 
 #intro .container {
     display: flex;
     gap: 16px;
-    height: 453px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -128,7 +138,7 @@ body {
     }
 
     #intro .container {
-        height: 332px;
+        min-height: 332px;
     }
     #intro .thumbnail {
         position: absolute;
@@ -145,6 +155,91 @@ body {
         height: 100%;
         object-fit: cover;
         object-position: center;
+    }
+}
+
+/* Main - 2. Portfolio */
+
+#portfolio {
+    min-height: 912px;
+}
+
+#portfolio .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#portfolio .titles .title-en {
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(255, 127, 80, 1);
+}
+
+#portfolio .titles .title-ko {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 160%;
+    color: rgba(45, 52, 54, 1);
+}
+
+#portfolio .content .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 932px;
+    margin: 0 auto;
+}
+
+#portfolio .content li {
+    width: 300px;
+    height: 300px;
+}
+
+#portfolio .content li img {
+    min-width: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1023px) {
+    #portfolio {
+        min-height: 574px;
+    }
+
+    #portfolio .titles .title-en {
+        font-size: 14px;
+    }
+
+    #portfolio .titles .title-ko {
+        font-size: 24px;
+    }
+
+    #portfolio .content {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    #portfolio .content .list {
+        flex-wrap: nowrap;
+        width: max-content;
+    }
+}
+
+@media (max-width: 767px) {
+    #portfolio {
+        min-height: 474px;
+    }
+    #portfolio .content li {
+        width: 200px;
+        height: 200px;
+    }
+
+    #portfolio .content li img {
+        min-width: 200px;
     }
 }
 
