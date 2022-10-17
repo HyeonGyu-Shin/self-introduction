@@ -22,13 +22,15 @@
             <div class="container">
                 <h1 class="logo">HyeonGyu Shin</h1>
                 <nav class="nav">
-                    <a href="">INTRO</a>
-                    <a href="">PORTFOLIO</a>
-                    <a href="">SKILLS</a>
-                    <a href="">TIMELINE</a>
-                    <a href="">CONTACT</a>
+                    <a href="#intro">INTRO</a>
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#skills">SKILLS</a>
+                    <a href="#timeline">TIMELINE</a>
+                    <a href="#contact">CONTACT</a>
                 </nav>
-                <img class="contact_icon" src="./assets/svgs/contact_mail.svg" alt="contact_icon">
+                <a href="#contact" class="contact-icon-wrapper">
+                    <img class="contact-icon" src="./assets/svgs/contact_mail.svg" alt="contact_icon">
+                </a>
             </div>
         </header>
         <main id="main">
@@ -121,7 +123,46 @@
 
                 </div>
             </section>
-            <section id="contact" class="flex-center"></section>
+            <section id="contact" class="flex-center">
+                <div class="container">
+                    <div class="titles">
+                        <div class="title-en">CONTACT</div>
+                        <h2 class="title-ko">연락하기</h2>
+                    </div>
+                    <div class="infomation">
+                        <ul class="list">
+                            <li>
+                                <img src="./assets/svgs/mail.svg" alt="mail icon">
+                                <a href="mailto:rkrkdldkd@naver.com">rkrkdldkd@naver.com</a>
+                            </li>
+                            <li>
+                                <img src="./assets/svgs/phone_enabled.svg" alt="phone icon">
+                                <a href="tel:+010-2646-9038">010-2646-9038</a>
+                            </li>
+                            <li>
+                                <img src="./assets/svgs/Frame.svg" alt="github icon">
+                                <a href="https://github.com/HyeonGyu-Shin">https://github.com/HyeonGyu-Shin</a>
+                            </li>
+                            <li>
+                                <img src="./assets/svgs/location_on.svg" alt="location icon">
+                                <span>전라북도 익산시</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-to-me">
+                        <form>
+                            <input type="text" placeholder="NAME" name="name" id="name">
+                            <input type="text" placeholder="EMAIL" name="mail" id="mail">
+                            <textarea placeholder="MESSAGE" id="message"></textarea>
+                            <button type="button" id="button">SUBMIT</button>
+                        </form>
+                        <div class="img-wrapper">
+                            <img src="./assets/svgs/local_post_office.svg" alt="post icon">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </main>
         <footer id="footer">
             <h2 class="sr-only">site footer</h2>

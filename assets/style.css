@@ -52,7 +52,11 @@ body {
 /* Header */
 
 #header {
+    position: sticky;
+    top: 0;
     min-height: 100px;
+    border-bottom: 1px solid rgba(250, 250, 250, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #header .container {
@@ -80,8 +84,11 @@ body {
     color: rgba(45, 52, 54, 1);
 }
 
-#header .contact_icon {
+#header .contact-icon-wrapper {
     display: none;
+}
+
+#header .contact-icon {
     color: rgba(45, 52, 54, 1);
     cursor: pointer;
 }
@@ -98,8 +105,11 @@ body {
         display: none;
     }
 
-    #header .contact_icon {
+    #header .contact-icon-wrapper {
         display: block;
+    }
+
+    #header .contact_icon {
         width: 26px;
         height: 26px;
     }
@@ -312,6 +322,10 @@ body {
 
 /* Main - 4. timeLine */
 
+#timeline {
+    background-color: rgba(250, 250, 250, 1);
+}
+
 #timeline .container {
     display: flex;
 }
@@ -348,6 +362,116 @@ body {
     #timeline .container {
         flex-direction: column;
         gap: 32px;
+    }
+}
+
+/* Main - 5. timeLine */
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#contact .infomation .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#contact .infomation li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+    background-color: rgba(250, 250, 250, 1);
+}
+
+#contact .infomation li img {
+    width: 30px;
+    height: 30px;
+}
+
+#contact .infomation li {
+    padding: 0 20px;
+}
+
+#contact .infomation li a {
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(99, 110, 114, 1);
+    white-space: nowrap;
+}
+
+#contact .contact-to-me {
+    display: flex;
+    gap: 16px;
+    /* min-height: 450px; */
+}
+
+#contact .contact-to-me form {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#contact .contact-to-me #name,
+#contact .contact-to-me #mail {
+    padding-left: 16px;
+    height: 60px;
+    color: rgba(45, 52, 54, 0.5);
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+#contact .contact-to-me #message {
+    height: 228px;
+    padding-top: 16px;
+    padding-left: 16px;
+    color: rgba(45, 52, 54, 0.5);
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+#contact .contact-to-me #button {
+    height: 60px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: rgba(250, 250, 250, 1);
+    background-color: rgba(99, 110, 114, 1);
+    cursor: pointer;
+}
+
+#contact .contact-to-me .img-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .contact-to-me img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 1023px) {
+    #contact .infomation .list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #contact .contact-to-me .img-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #contact .infomation .list {
+        grid-template-columns: 1fr;
     }
 }
 
